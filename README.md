@@ -1,4 +1,4 @@
-Практическое задание "Kubernetes. Причины появления. Команда kubectl"
+# Практическое задание "Kubernetes. Причины появления. Команда kubectl
 
 
 # Задание 1
@@ -54,13 +54,13 @@ curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s http
 chmod +x ./kubectl
 sudo mv ./kubectl /usr/local/bin/kubectl
 ```
-<image src="image/task-2-1.png">
+<img width="1350" height="327" alt="image" src="https://github.com/user-attachments/assets/2e14e7cd-4a1e-4df2-aa29-ecc7c8634b50" />
 
 2. На сервере генерирую config файл для доступа к microk8s с локальной машины
 ```
 microk8s config
 ```
-<image src="image/task-2-2.png">
+<img width="1355" height="438" alt="image" src="https://github.com/user-attachments/assets/4a7cbe27-b1bc-4db3-a0ea-6e7c76786c2a" />
 
 3. Копирую полученный файл на локальную машину в ~/.kube/config . Появляется доступ с локальной машины к серверу
 ```
@@ -71,17 +71,18 @@ kubectl get nodes
 ```
 kubectl port-forward -n kube-system service/kubernetes-dashboard 10443:443
 ```
-<image src="image/task-2-3.png">
+<img width="1347" height="411" alt="image" src="https://github.com/user-attachments/assets/6a0932dd-c07e-40ca-bf63-2f85ff3e6340" />
 
 5. Для подключения необходим токен. На сервере генерирую токен
 ```
 microk8s kubectl create token default
 ```
-<image src="image/task-2-4.png">
-<image src="image/task-2-5.png">
+<img width="1567" height="880" alt="image" src="https://github.com/user-attachments/assets/fb152a1d-d24e-4ede-8556-37d5c938db74" />
+
+<img width="1346" height="438" alt="image" src="https://github.com/user-attachments/assets/bce8461c-b2c5-4245-a867-b425723620ec" />
 
 6. Через браузер подключаюсь к dashboard 
 ```
 https://localhost:10443
 ```
-<image src="image/task-2-6.png">
+<img width="1558" height="877" alt="image" src="https://github.com/user-attachments/assets/c824e6ee-10ea-46ec-8453-569de5d5b4d8" />
